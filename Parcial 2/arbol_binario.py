@@ -126,15 +126,7 @@ class Arbol(object):
             if(self.der is not None):
                 self.der.busqueda_proximidad(clave)
 
-    def remplazar_proximidad_MCU(self, clave, remplazar):
-        if(self.info is not None):
-            if(self.izq is not None):
-                self.izq.remplazar_proximidad_MCU(clave, remplazar)
-            if(self.info[0:len(clave)] == clave):
-                self.info = remplazar
-                self.datos['nombre'] = remplazar
-            if(self.der is not None):
-                self.der.remplazar_proximidad_MCU(clave, remplazar)
+    
 
     def remplazar(self):
         """Determina el nodo que remplazará al que se elimina."""
@@ -261,13 +253,4 @@ class Arbol(object):
             if(self.der is not None):
                 self.der.conta_criaturas_derrotadas(dic)
 
-    def separar_heroes_villanos(self, arbol_villanos, arbol_heroes):
-        if(self.info is not None):
-            if(self.izq is not None):
-                self.izq.separar_heroes_villanos(arbol_villanos, arbol_heroes)
-            if(self.der is not None):
-                self.der.separar_heroes_villanos(arbol_villanos, arbol_heroes)
-            if(self.datos['heroe']):
-                arbol_heroes.insertar_nodo(self.info, self.datos)
-            else:
-                arbol_villanos.insertar_nodo(self.info, self.datos)
+   

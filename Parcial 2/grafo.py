@@ -144,7 +144,7 @@ class Grafo(object):
                 aristas += 1
         return resultado
 
-    def dijkstra(self, ver_origen, ver_destino):
+    def dijkstra(self, ver_origen):
         """Algoritmo de Dijkstra para hallar el camino mas corto."""
         no_visitados = HeapMin()
         camino = Pila()
@@ -211,74 +211,3 @@ class Grafo(object):
             # a = input()
         return bosque
 
-# grafo = Grafo()
-# grafo.insertar_vertice('A')
-# grafo.insertar_vertice('C')
-# grafo.insertar_vertice('B')
-# grafo.insertar_vertice('F')
-# grafo.insertar_vertice('Z')
-# grafo.insertar_vertice('X')
-
-# grafo.insertar_arista(5, 'A', 'B')
-# grafo.insertar_arista(2, 'C', 'B')
-# grafo.insertar_arista(3, 'B', 'C')
-# grafo.insertar_arista(9, 'A', 'F')
-# grafo.insertar_arista(5, 'B', 'F')
-# grafo.insertar_arista(13, 'F', 'X')
-# grafo.insertar_arista(7, 'X', 'Z')
-# grafo.insertar_arista(5, 'C', 'X')
-# vertice_destino = grafo.buscar_vertice('Z')
-# vertice_origen = grafo.buscar_vertice('A')
-
-# bosque = grafo.prim()
-# print('arbol de expansion')
-# peso = 0
-# for elemento in bosque:
-#     print(elemento[1][0], '-', elemento[1][1])
-#     peso += elemento[0]
-# print('costo total', peso)
-# pila_camino = grafo.dijkstra(vertice_origen, vertice_destino)
-
-# destino = 'Z'
-# costo = None
-# while(not pila_camino.pila_vacia()):
-#     dato = pila_camino.desapilar()
-#     if(dato[1][0] == destino):
-#         if(costo is None):
-#             costo = dato[0]
-#         print(dato[1][0])
-#         destino = dato[1][1]
-# print('el costo total del camino es:', costo)
-# print(grafo.existe_paso(vertice_origen, vertice_destino))
-# grafo.barrido_profundidad(vertice_origen)
-# grafo.marcar_no_visitado()
-# print()
-# vertice_origen = grafo.buscar_vertice('F')
-# grafo.barrido_amplitud(vertice_origen)
-
-# grafo.insertar_arista(100, 'B', 'B')
-
-# grafo.inicio.obtener_elemento(0)['aristas'].barrido()
-# print()
-# grafo.inicio.obtener_elemento(1)['aristas'].barrido()
-
-# grafo.barrido_vertices()
-
-# print(grafo.es_adyacente('A', 'F'))
-# print(grafo.es_adyacente('A', 'C'))
-# # print(grafo.eliminar_vertice('B'))
-# print()
-# grafo.barrido_vertices()
-# print()
-# grafo.eliminar_arista('A', 'B')
-# grafo.adyacentes('A')
-# print()
-# grafo.adyacentes('F')
-# print()
-# grafo.adyacentes('B')
-
-# print(grafo.buscar_vertice('F'))
-# print(grafo.buscar_vertice('B'))
-
-# print(grafo.buscar_arista('B','A'))
-# print(grafo.buscar_arista('A','A'))
